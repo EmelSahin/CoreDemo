@@ -18,15 +18,25 @@ namespace DataAccessLayer.Respositories
             c.SaveChanges();
         }
 
-        public void DeleteCategory(Category category)
+        public void Delete(Category t)
         {
-            c.Remove(category);
+            c.Remove(t);
             c.SaveChanges();
         }
 
-        public Category GetById(int id)
+        public Category GetByID(int id)
         {
             return c.Categories.Find(id);
+        }
+
+        public List<Category> GetListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Category t)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Category> ListAllCategory()
@@ -34,9 +44,9 @@ namespace DataAccessLayer.Respositories
             return c.Categories.ToList();
         }
 
-        public void UpdateCategory(Category category)
+        public void Update(Category t)
         {
-            c.Update(category);
+            c.Update(t);
             c.SaveChanges();
         }
     }
